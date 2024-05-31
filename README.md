@@ -18,4 +18,5 @@ This is a fivem platform script called km-trackphone. It simply tracks person ph
 - **Radius**: You can display an approximate radius instead of an exact blip, and you can configure the size of the radius.
 - **Exact Blip**: You can display an exact blip.
 - **Delayed Update**: You can also update the blip at a certain interval instead of live.
-- **Airplane mode**: The phone will be tracked if the target's phone is not in airplane mode.
+- **Airplane Mode**: The phone will be tracked if the target's phone is not in airplane mode.
+- **Item Check**: The phone will not be tracked if the target doesn't have phone in his inventory.
