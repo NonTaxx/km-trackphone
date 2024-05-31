@@ -3,7 +3,7 @@
 This is a fivem platform script called km-trackphone. It simply tracks person phone number's live location.
 
 # Supported phone scripts
-- lb-phone
+- [lb-phone](https://lbphone.com/)
 - More in the future.
 
 # Dependencies
