@@ -8,6 +8,7 @@ This is a fivem platform script called km-trackphone. It simply tracks person ph
 
 # Dependencies
 - [ox_lib](https://github.com/overextended/ox_lib)
+- [ox_inventory](https://github.com/overextended/ox_inventory)
 
 # Features
 
