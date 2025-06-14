@@ -33,10 +33,14 @@ RegisterServerEvent("km-tracknumber:searchnumber")
 AddEventHandler("km-tracknumber:searchnumber", function(number)
     local src = source
 
-    local response = MySQL.query.await('SELECT `owner` FROM `phone_phones` WHERE `phone_number` = ?', { number })
+RegisterServerEvent("km-tracknumber:searchnumber")
+AddEventHandler("km-tracknumber:searchnumber", function(number)
+    local src = source
+
+    local response = MySQL.query.await('SELECT `owner_id` FROM `phone_phones` WHERE `phone_number` = ?', { number })
 
     if #response > 0 then
-        local ownerValue = response[1].owner
+        local ownerValue = response[1].owner_id
         local Player = QBCore.Functions.GetPlayerByCitizenId(ownerValue)
 
         if Player then
@@ -50,7 +54,7 @@ AddEventHandler("km-tracknumber:searchnumber", function(number)
                         Notify(src, _L("encrypted_signal"), 'error', 5000)
                     else
                         if Config.UseAirplane then
-                            local airplaneModeResult = MySQL.query.await('SELECT `settings` FROM `phone_phones` WHERE `owner` = ?', { ownerValue })
+                            local airplaneModeResult = MySQL.query.await('SELECT `settings` FROM `phone_phones` WHERE `owner_id` = ?', { ownerValue })
 
                             if airplaneModeResult and #airplaneModeResult > 0 then
                                 local settingsJson = json.decode(airplaneModeResult[1].settings)
